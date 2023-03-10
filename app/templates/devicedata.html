@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      
+        <title>DeviceDataStream</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+      
+        <!-- Favicons -->
+        <!-- <link href="/static/img/favicon.png" rel="icon">
+        <link href="/static/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+      
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+      
+        <!-- Vendor CSS Files -->
+        <link href="../static/vendor/aos/aos.css" rel="stylesheet">
+        <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+        <link href="../static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+        <link href="../static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+        <link href="../static/vendor/remixicon/remixicon.css" rel="stylesheet">
+        <link href="../static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+      
+        <!-- Template Main CSS File -->
+        <link href="../static/css/style.css" rel="stylesheet">
+        <link href="../static/css/login.css" rel="stylesheet">
+        <link href="../static/css/devicedata.css" rel="stylesheet">
+        
+      </head>
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header"  >
+    <div class="container d-flex align-items-center">
+      <!-- logo image -->
+      <a href="/" class="logo me-auto"><img src="../static/img/logo2.jpg" alt="" class="img-fluid" ></a>
+      <h1 class="logo me-auto" ><a href="/" style="margin-left: -290px">SCM EXPERT LITE</a></h1>
+      
+
+      <nav id="navbar" class="navbar">
+        <ul style="margin-left: 10%;">
+          <li><a class="nav-link scrollto " href="/#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="/#clients">Partners</a></li>
+          <li><a class="nav-link scrollto" href="/#about">About</a></li>
+          <li><a class="nav-link scrollto" href="/#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="/#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="/login">LogOut</a></li>
+        </ul>
+        <!-- <i class="bi bi-list mobile-nav-toggle"></i> -->
+      </nav>
+      <!-- .navbar -->
+
+    </div>
+  </header>
+  <!-- End Header -->
+    <div >
+        <h1 id="heading" style="font-family:Jost, sans-serif;margin-top:1%;color:gold;margin-left:39%;">Device Data Stream</h1>
+        <div >
+          <table style="border:1px solid rgb(255, 245, 245);margin-top:1%;color:white;text-align:-webkit-center;">
+            <thead>
+              <tr style="text-align: center;">
+                <th > Battery_Level</th>
+                <th>Device_Id</th>
+                <th>First_Sensor_temperature</th>
+                <th>Route_From</th>
+                <th>Route_To</th>
+              </tr>
+             
+             
+            </thead>
+
+          </table>
+        </div>
+      </div>
+      <!-- <script>
+        window.addEventListener("load", async function () {
+          console.log("All assets are loaded");
+          var un = localStorage.getItem("username");
+          if (un === null || un === undefined) {
+            window.location.href =
+              "/";
+          }
+          var username = un.toLocaleUpperCase();
+          document.getElementById("username").innerText = username;
+  
+          var config = {
+            method: "get",
+            url: "http://"+props.ip+":8000/DeviceDataStream",
+            headers: {
+              "Content-Type": "application/json",
+            },
+          };
+  
+          const response = await axios(config);
+          console.log(response);
+          const resp = response.data;
+          console.log(resp);
+  
+          var temp = "";
+          if (response.status === 200) {
+            resp.forEach((x) => {
+              temp += "<tr>";
+              temp += "<td>" + x.Battery_Level + "</td>";
+              temp += "<td>" + x.Device_Id + "</td>";
+              temp += "<td>" + x.First_Sensor_temperature + "</td>";
+              temp += "<td>" + x.Route_From + "</td>";
+              temp += "<td>" + x.Route_To + "</td>";
+              temp += "</tr>";
+            });
+  
+            document.getElementById("data").innerHTML += temp;
+            //alert("Data fetched successfully!");
+            $("#example").DataTable({
+              pagingType: "full_numbers",
+            });
+          } else {
+            alert("Error while fetching data!");
+          }
+        });
+  
+        const logOut = () => {
+          localStorage.removeItem("username");
+          window.location.href = "/";
+        };
+      </script> -->
+      <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container footer-bottom clearfix" style="margin-top: 30%;">
+      <div class="copyright">
+        &copy; Copyright <strong><span>SCMXpert</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by <a href="https://www.exafluence.com/" target="_blank">Exafluence Inc.</a>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+</body>
+</html>
