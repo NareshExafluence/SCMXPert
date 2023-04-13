@@ -1,0 +1,22 @@
+table {
+    width:80%;
+    margin:10%;
+}
+
+table, th, td {
+    border: 1px solid rgb(255, 245, 245);
+    margin-top: 1%;
+    color: white;
+    text-align: -webkit-center;
+  }
+
+  #heading h1{
+    font-family: "Jost", sans-serif;
+    margin-top: 7%;
+    color: gold;
+    margin-left: 39%;
+}
+
+#table_head {
+  background-color:blueviolet;
+}
